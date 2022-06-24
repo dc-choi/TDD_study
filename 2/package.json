@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --detectOpenHandles --forceExit",
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +16,10 @@
     "mongoose": "^6.4.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^28.1.1",
     "node-mocks-http": "^1.11.0",
+    "nodemon": "^2.0.16",
     "supertest": "^6.2.3"
   }
 }

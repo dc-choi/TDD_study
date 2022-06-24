@@ -1,15 +1,15 @@
 import express from 'express';
 
 import { index } from '../controller/indexController.js';
-import { products } from '../controller/productController.js';
+import { createProduct } from '../controller/productController.js';
 import { bird } from '../controller/birdController.js';
 
 const router = express.Router();
 
-router.get('/', index);
+router.get('/api', index);
 
-router.post('/products', products);
+router.post('/api/product', createProduct);
 
-router.get('/bird', bird);
+router.get('/api/bird', bird);
 
 export default router;
